@@ -27,3 +27,9 @@ Chromatic integrates with the Vitest test run to capture visual snapshots. The t
 - targeted snapshots during a test
 - visual regression review
 - GitHub pull request checks
+
+## CI
+
+GitHub Actions runs the Vitest Browser Mode suite in Chromium and then uploads the captured archives to Chromatic.
+
+The Chromatic project token is stored as a GitHub Actions secret and is not committed to the repository.
