@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import spiderManImage from './assets/heroes/spider-man.svg'
 
 const heroes = [
   {
@@ -7,6 +8,7 @@ const heroes = [
     name: 'Spider-Man',
     badge: 'SM',
     tagline: 'Web-slinger from Queens',
+    image: spiderManImage,
   },
   {
     id: 'iron-man',
@@ -170,9 +172,17 @@ function App() {
                   aria-pressed={selected}
                   disabled={teamIsFull}
                 >
-                  <span className="hero-badge" aria-hidden="true">
-                    {hero.badge}
-                  </span>
+                  {hero.image ? (
+                    <img
+                      className="hero-image"
+                      src={hero.image}
+                      alt=""
+                    />
+                  ) : (
+                    <span className="hero-badge" aria-hidden="true">
+                      {hero.badge}
+                    </span>
+                  )}
 
                   <span className="hero-card-copy">
                     <strong>{hero.name}</strong>

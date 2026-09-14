@@ -218,6 +218,15 @@ button:focus-visible {
   box-shadow: 3px 3px 0 #151515;
 }
 
+.hero-image {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border: 3px solid #151515;
+  border-radius: 18px;
+  box-shadow: 3px 3px 0 #151515;
+}
+
 .mini-badge {
   width: 42px;
   height: 42px;

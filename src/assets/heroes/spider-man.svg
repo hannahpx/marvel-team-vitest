@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title desc">
+  <title id="title">Spider-Man themed artwork</title>
+  <desc id="desc">A red comic-style mask with web details.</desc>
+
+  <rect width="400" height="260" rx="32" fill="#0f2145"></rect>
+
+  <circle cx="200" cy="130" r="94" fill="#e62429" stroke="#151515" stroke-width="10"></circle>
+
+  <path d="M200 38v184M111 130h178M137 70l126 120M263 70 137 190" fill="none" stroke="#151515" stroke-width="5" opacity=".8"></path>
+
+  <path d="M200 38c-32 25-54 55-64 92 10 37 32 67 64 92
+       M200 38c32 25 54 55 64 92-10 37-32 67-64 92
+       M111 130c25-30 54-48 89-54 35 6 64 24 89 54
+       M111 130c25 30 54 48 89 54 35-6 64-24 89-54" fill="none" stroke="#151515" stroke-width="4" opacity=".7"></path>
+
+  <path d="M145 101c20-10 38-8 52 5-6 28-20 44-42 48-14-15-17-33-10-53Z" fill="#ffffff" stroke="#151515" stroke-width="8"></path>
+
+  <path d="M255 101c-20-10-38-8-52 5 6 28 20 44 42 48 14-15 17-33 10-53Z" fill="#ffffff" stroke="#151515" stroke-width="8"></path>
+</svg>
