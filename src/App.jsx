@@ -3,6 +3,7 @@ import './App.css'
 import spiderManImage from './assets/heroes/spider-man.svg'
 import ironManImage from './assets/heroes/iron-man.svg'
 import thorImage from './assets/heroes/thor.svg'
+import hulkImage from './assets/heroes/hulk.svg'
 
 const heroes = [
   {
@@ -31,6 +32,7 @@ const heroes = [
     name: 'Hulk',
     badge: 'HK',
     tagline: 'Powered by incredible strength',
+    image: hulkImage,
   },
   {
     id: 'black-widow',

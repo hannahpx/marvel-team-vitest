@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title desc">
+  <title id="title">Hulk themed artwork</title>
+  <desc id="desc">A green comic-style fist on a purple background.</desc>
+
+  <rect width="400" height="260" rx="32" fill="#5b3a82"></rect>
+
+  <path d="M145 194
+       125 158
+       132 104
+       153 83
+       172 102
+       181 65
+       207 62
+       216 102
+       229 70
+       254 77
+       254 113
+       271 92
+       291 106
+       283 155
+       255 194Z" fill="#6a9f45" stroke="#151515" stroke-width="10" stroke-linejoin="round"></path>
+
+  <path d="M144 137h112" stroke="#151515" stroke-width="9" stroke-linecap="round"></path>
+
+  <path d="M174 103v34M214 101v36M251 112v25" stroke="#151515" stroke-width="7" stroke-linecap="round"></path>
+</svg>
