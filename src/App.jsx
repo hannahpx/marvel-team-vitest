@@ -4,6 +4,7 @@ import spiderManImage from './assets/heroes/spider-man.svg'
 import ironManImage from './assets/heroes/iron-man.svg'
 import thorImage from './assets/heroes/thor.svg'
 import hulkImage from './assets/heroes/hulk.svg'
+import blackWidowImage from './assets/heroes/black-widow.svg'
 
 const heroes = [
   {
@@ -39,6 +40,7 @@ const heroes = [
     name: 'Black Widow',
     badge: 'BW',
     tagline: 'Spy and combat expert',
+    image: blackWidowImage,
   },
   {
     id: 'captain-america',

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title desc">
+  <title id="title">Black Widow themed artwork</title>
+  <desc id="desc">A red hourglass symbol on a dark comic-style background.</desc>
+
+  <rect width="400" height="260" rx="32" fill="#151515"></rect>
+
+  <circle cx="200" cy="130" r="92" fill="#272727" stroke="#e62429" stroke-width="10"></circle>
+
+  <path d="M148 76h104l-38 54 38 54H148l38-54-38-54Z" fill="#e62429" stroke="#151515" stroke-width="8" stroke-linejoin="round"></path>
+
+  <path d="M164 92h72l-36 38 36 38h-72l36-38-36-38Z" fill="#ffffff"></path>
+</svg>
