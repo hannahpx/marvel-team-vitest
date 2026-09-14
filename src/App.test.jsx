@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
 import { render } from 'vitest-browser-react'
+import { takeSnapshot } from '@chromatic-com/vitest'
 import App from './App.jsx'
 
 test('builds and assembles a team of three heroes', async () => {
@@ -10,6 +11,9 @@ test('builds and assembles a team of three heroes', async () => {
   ).toBeVisible()
 
   await screen.getByRole('button', { name: /Spider-Man/i }).click()
+
+  await takeSnapshot('one hero selected')
+
   await screen.getByRole('button', { name: /Iron Man/i }).click()
   await screen.getByRole('button', { name: /Thor/i }).click()
 
