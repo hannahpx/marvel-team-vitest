@@ -39,4 +39,6 @@ jobs:
         uses: chromaui/action@latest
         with:
           vitest: true
+          onlyChanged: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          

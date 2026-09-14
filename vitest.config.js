@@ -4,7 +4,12 @@ import { playwright } from '@vitest/browser-playwright'
 import { chromaticPlugin } from '@chromatic-com/vitest/plugin'
 
 export default defineProject({
-  plugins: [react(), chromaticPlugin()],
+  plugins: [
+  react(),
+  chromaticPlugin({
+    turboSnap: true,
+  }),
+],
 
   test: {
     browser: {
@@ -16,5 +21,5 @@ export default defineProject({
         },
       ],
     },
-  },
+  }, 
 })
