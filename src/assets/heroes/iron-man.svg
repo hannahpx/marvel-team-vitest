@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title desc">
+  <title id="title">Iron Man themed artwork</title>
+  <desc id="desc">A red and gold comic-style armoured helmet.</desc>
+
+  <rect width="400" height="260" rx="32" fill="#f2b705"></rect>
+
+  <path d="M132 57 200 32l68 25 28 72-34 85H138l-34-85 28-72Z" fill="#a31f24" stroke="#151515" stroke-width="10"></path>
+
+  <path d="M157 68 200 51l43 17 17 49-18 65h-84l-18-65 17-49Z" fill="#f4c542" stroke="#151515" stroke-width="8"></path>
+
+  <path d="M158 113h35l-7 24h-36Z" fill="#dff6ff" stroke="#151515" stroke-width="6"></path>
+
+  <path d="M242 113h-35l7 24h36Z" fill="#dff6ff" stroke="#151515" stroke-width="6"></path>
+
+  <path d="M175 168h50l-10 18h-30Z" fill="#151515"></path>
+</svg>
