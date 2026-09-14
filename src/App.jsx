@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import spiderManImage from './assets/heroes/spider-man.svg'
 import ironManImage from './assets/heroes/iron-man.svg'
+import thorImage from './assets/heroes/thor.svg'
 
 const heroes = [
   {
@@ -23,6 +24,7 @@ const heroes = [
     name: 'Thor',
     badge: 'TH',
     tagline: 'Asgardian warrior with the power of thunder',
+    image: thorImage,
   },
   {
     id: 'hulk',

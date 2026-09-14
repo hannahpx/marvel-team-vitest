@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" role="img" aria-labelledby="title desc">
+  <title id="title">Thor themed artwork</title>
+  <desc id="desc">A blue comic-style background with a silver hammer.</desc>
+
+  <rect width="400" height="260" rx="32" fill="#335caa"></rect>
+
+  <path d="M145 76h110v58H145z" fill="#d9dde4" stroke="#151515" stroke-width="10" rx="10"></path>
+
+  <path d="M190 134h20v78h-20z" fill="#7a4b2a" stroke="#151515" stroke-width="8"></path>
+
+  <path d="M98 58 70 35M302 58l28-23M84 130H48M316 130h36" stroke="#ffcb05" stroke-width="10" stroke-linecap="round"></path>
+
+  <path d="m118 44 18 28-30 10 20 25" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+
+  <path d="m282 44-18 28 30 10-20 25" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
