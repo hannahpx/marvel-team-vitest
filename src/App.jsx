@@ -12,42 +12,36 @@ const heroes = [
   {
     id: 'spider-man',
     name: 'Spider-Man',
-    badge: 'SM',
     tagline: 'Web-slinger from Queens',
     image: spiderManImage,
   },
   {
     id: 'iron-man',
     name: 'Iron Man',
-    badge: 'IM',
     tagline: 'Armoured tech specialist',
     image: ironManImage,
   },
   {
     id: 'thor',
     name: 'Thor',
-    badge: 'TH',
     tagline: 'Asgardian warrior with the power of thunder',
     image: thorImage,
   },
   {
     id: 'hulk',
     name: 'Hulk',
-    badge: 'HK',
     tagline: 'Powered by incredible strength',
     image: hulkImage,
   },
   {
     id: 'black-widow',
     name: 'Black Widow',
-    badge: 'BW',
     tagline: 'Spy and combat expert',
     image: blackWidowImage,
   },
   {
     id: 'captain-america',
     name: 'Captain America',
-    badge: 'CA',
     tagline: 'Super soldier and team leader',
     image: captainAmericaImage,
   },
@@ -100,36 +94,28 @@ function App() {
     return (
       <main className="app-shell">
         <section
-          className="assembled-panel"
+          className="assembled-view"
           aria-labelledby="assembled-title"
         >
-          <p className="eyebrow">Team assembled</p>
+          <p className="kicker">Team assembled</p>
 
           <h1 id="assembled-title">Your Avengers team</h1>
 
-          <p className="assembled-copy">
-            Your three selected heroes are ready.
-          </p>
-
           <div className="assembled-team">
             {selectedHeroes.map((hero) => (
-              <article
-                className={`assembled-hero ${hero.id}`}
-                key={hero.id}
-              >
+              <article className="assembled-hero" key={hero.id}>
                 <img
-                  className="hero-image"
+                  className="assembled-hero-image"
                   src={hero.image}
                   alt=""
                 />
-
                 <h2>{hero.name}</h2>
               </article>
             ))}
           </div>
 
           <button
-            className="primary-button"
+            className="primary-button start-again-button"
             type="button"
             onClick={startAgain}
           >
@@ -137,30 +123,20 @@ function App() {
           </button>
         </section>
 
-        <footer className="site-footer">
-          Built by{' '}
-          <a
-            href="https://github.com/hannahpx"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Hannah
-          </a>
-        </footer>
+        <SiteFooter />
       </main>
     )
   }
 
   return (
     <main className="app-shell">
-      <header className="hero-header">
-        <p className="eyebrow">Build your team</p>
+      <header className="site-header">
+        <p className="kicker">Marvel team builder</p>
 
-        <h1>Avengers</h1>
-
-        <p className="intro">
-          Choose three heroes for your team.
-        </p>
+        <div className="header-content">
+          <h1>Avengers</h1>
+          <p>Pick three heroes for your team.</p>
+        </div>
       </header>
 
       <div className="builder-layout">
@@ -169,10 +145,7 @@ function App() {
           aria-labelledby="hero-picker-title"
         >
           <div className="section-heading">
-            <div>
-              <p className="step-label">Step 1</p>
-              <h2 id="hero-picker-title">Choose your heroes</h2>
-            </div>
+            <h2 id="hero-picker-title">Choose your heroes</h2>
 
             <p className="selection-count" aria-live="polite">
               {selectedHeroes.length} of {MAX_TEAM_SIZE} heroes selected
@@ -187,7 +160,7 @@ function App() {
 
               return (
                 <button
-                  className={`hero-card ${hero.id} ${
+                  className={`hero-card ${
                     selected ? 'selected' : ''
                   }`}
                   type="button"
@@ -202,16 +175,18 @@ function App() {
                     alt=""
                   />
 
-                  <span className="hero-card-copy">
-                    <strong>{hero.name}</strong>
-                    <span>{hero.tagline}</span>
-                  </span>
+                  <span className="hero-card-body">
+                    <span className="hero-card-copy">
+                      <strong>{hero.name}</strong>
+                      <span>{hero.tagline}</span>
+                    </span>
 
-                  <span
-                    className="selection-indicator"
-                    aria-hidden="true"
-                  >
-                    {selected ? '✓' : '+'}
+                    <span
+                      className="selection-indicator"
+                      aria-hidden="true"
+                    >
+                      {selected ? '✓ Selected' : 'Select'}
+                    </span>
                   </span>
                 </button>
               )
@@ -223,11 +198,8 @@ function App() {
           className="team-panel"
           aria-labelledby="team-title"
         >
-          <div className="section-heading">
-            <div>
-              <p className="step-label">Step 2</p>
-              <h2 id="team-title">Your team</h2>
-            </div>
+          <div className="team-heading">
+            <h2 id="team-title">Your team</h2>
 
             {selectedHeroes.length > 0 && (
               <button
@@ -235,31 +207,24 @@ function App() {
                 type="button"
                 onClick={clearTeam}
               >
-                Clear team
+                Clear
               </button>
             )}
           </div>
 
           {selectedHeroes.length === 0 ? (
-            <div className="empty-team">
-              <span aria-hidden="true">A</span>
-
-              <p>No heroes selected yet.</p>
-
-              <small>
-                Choose up to three heroes from the list.
-              </small>
-            </div>
+            <p className="empty-team">
+              No heroes selected.
+            </p>
           ) : (
             <ul className="selected-team">
               {selectedHeroes.map((hero) => (
                 <li key={hero.id}>
-                  <span
-                    className={`mini-badge ${hero.id}`}
-                    aria-hidden="true"
-                  >
-                    {hero.badge}
-                  </span>
+                  <img
+                    className="team-thumbnail"
+                    src={hero.image}
+                    alt=""
+                  />
 
                   <span>{hero.name}</span>
 
@@ -284,32 +249,26 @@ function App() {
           >
             Assemble
           </button>
-
-          <p className="assemble-hint">
-            {selectedHeroes.length === MAX_TEAM_SIZE
-              ? 'Your team is ready.'
-              : `Choose ${
-                  MAX_TEAM_SIZE - selectedHeroes.length
-                } more hero${
-                  MAX_TEAM_SIZE - selectedHeroes.length === 1
-                    ? ''
-                    : 'es'
-                }.`}
-          </p>
         </aside>
       </div>
 
-      <footer className="site-footer">
-        Built by{' '}
-        <a
-          href="https://github.com/hannahpx"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Hannah
-        </a>
-      </footer>
+      <SiteFooter />
     </main>
+  )
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      Built by{' '}
+      <a
+        href="https://github.com/hannahpx"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Hannah
+      </a>
+    </footer>
   )
 }
 
