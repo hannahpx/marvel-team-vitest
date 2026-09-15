@@ -514,3 +514,20 @@ button:focus-visible {
     margin: 20px auto;
   }
 }
+
+.site-footer {
+  margin-top: 32px;
+  color: #666666;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.site-footer a {
+  color: inherit;
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
+
+.site-footer a:hover {
+  color: #151515;
+}

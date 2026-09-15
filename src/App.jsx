@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+
 import spiderManImage from './assets/heroes/spider-man.svg'
 import ironManImage from './assets/heroes/iron-man.svg'
 import thorImage from './assets/heroes/thor.svg'
@@ -116,9 +117,11 @@ function App() {
                 className={`assembled-hero ${hero.id}`}
                 key={hero.id}
               >
-                <span className="hero-badge" aria-hidden="true">
-                  {hero.badge}
-                </span>
+                <img
+                  className="hero-image"
+                  src={hero.image}
+                  alt=""
+                />
 
                 <h2>{hero.name}</h2>
               </article>
@@ -133,6 +136,17 @@ function App() {
             Start again
           </button>
         </section>
+
+        <footer className="site-footer">
+          Built by{' '}
+          <a
+            href="https://github.com/hannahpx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Hannah
+          </a>
+        </footer>
       </main>
     )
   }
@@ -182,17 +196,11 @@ function App() {
                   aria-pressed={selected}
                   disabled={teamIsFull}
                 >
-                  {hero.image ? (
-                    <img
-                      className="hero-image"
-                      src={hero.image}
-                      alt=""
-                    />
-                  ) : (
-                    <span className="hero-badge" aria-hidden="true">
-                      {hero.badge}
-                    </span>
-                  )}
+                  <img
+                    className="hero-image"
+                    src={hero.image}
+                    alt=""
+                  />
 
                   <span className="hero-card-copy">
                     <strong>{hero.name}</strong>
@@ -290,6 +298,17 @@ function App() {
           </p>
         </aside>
       </div>
+
+      <footer className="site-footer">
+        Built by{' '}
+        <a
+          href="https://github.com/hannahpx"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Hannah
+        </a>
+      </footer>
     </main>
   )
 }
